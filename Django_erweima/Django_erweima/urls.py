@@ -18,4 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^qrcode/(.+)$', 'tools.views.generate_qrcode', name='qrcode'),
 ]
