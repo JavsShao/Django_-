@@ -16,7 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from tools import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^qrcode/(.+)$', 'tools.views.generate_qrcode', name='qrcode'),
+    # url(r'^qrcode/(.+)$', views.generate_qrcode, name='qrcode'),
+url(r'^qrcode/(.+)$', views.generate_qrcode, name='qrcode'),
 ]
